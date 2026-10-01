@@ -21,6 +21,7 @@ let currentIndex = 0;
 image.setAttribute("src", slides[currentIndex]);
 pauseBtn.classList.add("active");
 
+// Prev/Next Btns listeners 
 const handlePrevBtnClick = () => {
   if (currentIndex > 0) {
     currentIndex = currentIndex - 1;
@@ -41,6 +42,7 @@ const handleNextBtnClick = () => {
 
 nextBtn.addEventListener("click", handleNextBtnClick);
 
+// Pause Btn listener and add slider interval
 const updateSliderByInterval = () => {
     sliderInterval = setInterval(() => {
     if (currentIndex < slides.length - 1) {
@@ -66,6 +68,7 @@ const handlePauseBtnClick = () => {
 
 pauseBtn.addEventListener("click", handlePauseBtnClick);
 
+// Create Dots Elements
 const createDots = () => {
   for (let i = 0; i < slides.length; i++) {
     const dot = document.createElement("li");
@@ -79,6 +82,7 @@ const createDots = () => {
   }
 };
 
+// Update Dots Elements and Slider Index
 const updadeDots = () => {
   const dots = document.querySelectorAll(".dot-item");
   dots.forEach((item) => {
@@ -95,7 +99,7 @@ const updateSlider = () => {
   image.setAttribute("src", slides[currentIndex]);
 };
 
-
+// Dots and "keyup" Listeners
 dots.addEventListener("click", (event) => {
     try {
         currentIndex = Number(event.target.closest('li').id);
