@@ -1,0 +1,55 @@
+button {
+    color: #4661E6;
+    font-size: 13px;
+    font-weight: 700;
+    background-color: #dcddea;
+    border-radius: 10px;
+    border: none;
+    padding: 6px 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #c7c8dd;
+}
+
+.slider {
+    margin: 50px auto 0;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.slider__gallery {
+    display: flex;
+    align-items: center;
+}
+
+.slider__img {
+    margin: 10px;
+}
+
+.slider__dots {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    list-style: none;
+}
+
+.dot-item.active .dot {
+    background-color: #4661E6;
+}
+
+.dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border: 1px solid black;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.slider__pause-btn {
+    width: 126px;
+}
